@@ -267,7 +267,7 @@ CVAPI(MyCvScalar) core_FileNode_read_Scalar(cv::FileNode *node)
 #define DEFINE_FILENODE_READ_VEC(name) \
     CVAPI(Cv##name) core_FileNode_read_##name(cv::FileNode *node) \
     { \
-        cv::##name v; \
+        cv::name v; \
         (*node) >> v; \
         Cv##name ret; \
         std::copy(std::begin(v.val), std::end(v.val), std::begin(ret.val)); \
